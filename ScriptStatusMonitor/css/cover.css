@@ -27,7 +27,15 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: linear-gradient(to bottom left, #00e7ea 0%,#009ec3 100%); /* W3C */ ;
+  background: #009ec3; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #009ec3 0%, #00e7ea 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#009ec3), color-stop(100%,#00e7ea)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #009ec3 0%,#00e7ea 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #009ec3 0%,#00e7ea 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #009ec3 0%,#00e7ea 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #009ec3 0%,#00e7ea 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ec3', endColorstr='#00e7ea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 body {
   color: #fff;
@@ -58,10 +66,19 @@ body {
   padding: 30px;
 }
 
+.inner-cover{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .inner-cover-text {
   overflow-y: auto;
   max-height: 300px;
   padding: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 
@@ -164,6 +181,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    /*width: 700px;*/
   }
 }
